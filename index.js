@@ -25,7 +25,7 @@ app.post("/login", (req, res) => {
   ) {
     let token = jwtGenerator.sign(
       { username: req.body.username },
-      "stats-app",
+      "scorey-time",
       {
         expiresIn: 1209600 //14 days
       }
