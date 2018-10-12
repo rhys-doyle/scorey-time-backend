@@ -8,7 +8,15 @@ const jwtGenerator = require("jsonwebtoken");
 var things = require("./things");
 
 app.use(cors());
-app.use(bodyParser());
+
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
+
+app.use(bodyParser.json());
+
 const users = [
   { username: "rhys", password: "a" },
   { username: "doyle", password: "b" }
