@@ -17,6 +17,7 @@ const users = [
 app.get("/hello", (req, res) => res.send("Hello World!"));
 
 app.post("/login", (req, res) => {
+  console.log(req.body);
   if (
     users.find(
       obj =>
